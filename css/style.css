@@ -1,19 +1,41 @@
 @charset "utf-8";
 * {margin: 0; padding: 0;}
+.ir_pm { display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} /*bg-img 전용 alt*/
+body, input, textarea, select, button, table {font-family: 'Nanum Gothic'; color: #222; font-size: 13px; line-height: 1.5;}
 
 #skip {position: relative;}
-#skip a { position: absolute; left: 0; top: -35px; border: 1px solid #fff; color: #fff; background-color: #333; width: 160px; text-align: center; line-height: 30px; text-decoration: none;}
+#skip a {position: absolute; left: 0; top: -350px; border: 1px solid #fff; color: #fff; background-color: #333; line-height: 30px; text-decoration: none;}
 #skip a:hover {text-decoration: underline white;}
 #skip a:active , #skip a:focus {top:0;}
 
 #wrap {}
-#header {height: 325px; background-color: #111;}
+#header {height: 325px; background-image: url('../images/header_bg.jpg'); background-position: center top; background-repeat: repeat;}
 #contents {height: 800px; background-color: #222;}
 #footer {height: 200px; background-color: #333;}
 
-#contents #content1 {width: 100%; height: 200px; background-color: #444;}
-#contents #content2 {width: 100%; height: 200px; background-color: #555;}
-#contents #content3 {width: 100%; height: 200px; background-color: #666;}
-#contents #content4 {width: 100%; height: 200px; background-color: #777;}
+#contents #cont_nav {width: 100%; height: 200px; background-color: #444;}
+#contents #cont_tit {width: 100%; height: 200px; background-color: #555;}
+#contents #cont_ban {width: 100%; height: 200px; background-color: #666;}
+#contents #cont_cont {width: 100%; height: 200px; background-color: #777;}
 
+/*가운데 가상영역*/
 .container {width : 990px; margin: 0 auto; height: inherit; background-color: rgba(255,255,255,0.3);}
+
+/*가상영역 헤더부분*/
+#header .container .header-menu {text-align: right;}
+#header .container .header-menu a {color: #fff; padding: 10px 0px 10px 13px; display: inline-block;}
+#header .container .header-menu a:hover {color: #666;}
+#header .container .header-tit {text-align: center;}
+#header .container .header-tit h1 {display: inline-block; text-align: center; color: #fff; background-color: #4aa8d4; 
+    margin-top: 40px; padding: 5px 20px 6px 20px; font-weight: normal; text-transform: uppercase;}
+#header .container .header-tit a {color: #fff; text-decoration: none; display: inline-block; background-color: #2698cb; padding: 5px 20px 6px 20px; margin-top: -5px;}
+#header .container .header-icon  { text-align: center; margin-top: 30px;}
+#header .container .header-icon a {color: #fff; text-decoration: none; background-image: url(../images/icon.png); display: inline-block; width: 60px; height: 60px;}
+#header .container .header-icon .icon1 {background-position: 0 0;}
+#header .container .header-icon .icon2 { background-position: 0 -60px;}
+#header .container .header-icon .icon3 { background-position: 0 -120px;}
+#header .container .header-icon .icon4 { background-position: 0 -180px;}
+#header .container .header-icon .icon1:hover { background-position: -60px 0;}
+#header .container .header-icon .icon2:hover { background-position: -60px -60px;}
+#header .container .header-icon .icon3:hover { background-position: -60px -120px;}
+#header .container .header-icon .icon4:hover { background-position: -60px -180px;}
