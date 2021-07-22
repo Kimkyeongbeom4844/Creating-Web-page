@@ -1,7 +1,14 @@
 @charset "utf-8";
 * {margin: 0; padding: 0;}
-.ir_pm { display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} /*bg-img 전용 alt*/
+/* IR 효과 */
+.ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때 */
+.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
 body, input, textarea, select, button, table {font-family: 'Nanum Gothic'; color: #222; font-size: 13px; line-height: 1.5;}
+a {color: #222; text-decoration: none;}
+a:hover {color: #390;}
+ul {list-style-type: none;}
 
 #skip {position: relative;}
 #skip a {position: absolute; left: 0; top: -350px; border: 1px solid #fff; color: #fff; background-color: #333; line-height: 30px; text-decoration: none;}
@@ -10,12 +17,12 @@ body, input, textarea, select, button, table {font-family: 'Nanum Gothic'; color
 
 #wrap {}
 #header {height: 325px; background-image: url('../images/header_bg.jpg'); background-position: center top; background-repeat: repeat;}
-#contents {height: 800px; background-color: #222;}
+#contents {}
 #footer {height: 200px; background-color: #333;}
 
-#contents #cont_nav {width: 100%; height: 200px; background-color: #444;}
-#contents #cont_tit {width: 100%; height: 200px; background-color: #555;}
-#contents #cont_ban {width: 100%; height: 200px; background-color: #666;}
+#contents #cont_nav {background-color: #f6fdff;}
+#contents #cont_tit {background-color: #EAF7FD;}
+#contents #cont_ban {}
 #contents #cont_cont {width: 100%; height: 200px; background-color: #777;}
 
 /*가운데 가상영역*/
@@ -39,3 +46,29 @@ body, input, textarea, select, button, table {font-family: 'Nanum Gothic'; color
 #header .container .header-icon .icon2:hover { background-position: -60px -60px;}
 #header .container .header-icon .icon3:hover { background-position: -60px -120px;}
 #header .container .header-icon .icon4:hover { background-position: -60px -180px;}
+
+.nav {overflow: hidden;}
+.nav>div { float: left; width: 40%;}
+.nav div ol{overflow: hidden; list-style: none;}
+.nav div ol li {float: left; width: 50%; }
+.nav .lastchild { width: 20%;}
+.nav .lastchild ol li {width: 100%;}
+
+.tit {position: relative;}
+.tit h2 {font-size: 40px; text-align: center; padding: 5px 0px; letter-spacing: 2px; font-family: 'Nanum Brush Script', cursive; color: #2c94c4;}
+.tit .btn {position: absolute; top: 5px; right: 0; 
+    width: 60px; height: 60px; background: url('../images/icon.png') no-repeat 0 -600px; }
+.tit .btn:hover {background-position: -60px -600px;}
+
+.ban {position: relative; padding: 24px 0 20px;}
+.ban a.prev { position: absolute; left: -80px; top: 60px; background: url('../images/icon.png') no-repeat -150px 0; width: 43px; height: 43px;}
+.ban a.next { position: absolute; right: -80px; top: 60px; background: url('../images/icon.png') no-repeat -150px -43px; width: 43px; height: 43px;}
+.ban a.prev:hover {background-position: -193px 0;}
+.ban a.next:hover {background-position: -193px -43px;}
+.ban ul {overflow: hidden;}
+.ban ul li {float: left; width: 330px;}
+.ban ul li.ban1 {text-align: left;}
+.ban ul li.ban2 {text-align: center;}
+.ban ul li.ban3 {text-align: right;}
+.ban ul li img {border: 4px solid #dcdcdc;}
+.ban ul li img:hover {border-color: #98bcdc;}
